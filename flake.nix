@@ -17,6 +17,7 @@
 			let pkgs = nixpkgs.legacyPackages.${system};
 			in import ./packages.nix { inherit pkgs; }
 		);
+		nixosModules = import ./nix-module.nix self;
 		homeManagerModules = import ./home-manager.nix self;
 	};
 }
