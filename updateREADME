@@ -19,16 +19,20 @@ comment() {
 }
 
 createSections() {
-	for i in $(ls -d */)
-	do
-		echo "1. **${i%/}**"
-		for j in $(ls $i)
-		do
-			echo "	- [$j]($(genRawUrl "$i" "$j"))"
-			embedIMG "$j" "$i$j"
+	for dir in */; do
+		echo "1. **${dir%/}**"
+		
+		for file in "$dir"*; do
+			# Skip if not a regular file or if it ends with .nix
+			[[ -f "$file" && "${file##*.}" != "nix" ]] || continue
+
+			filename=$(basename "$file")
+
+			echo "	- [$filename]($(genRawUrl "$dir" "$filename"))"
+			embedIMG "$filename" "$file"
 			echo '		```'
 			echo -n '		'
-			genRawUrl "$i" "$j"
+			genRawUrl "$dir" "$filename"
 			echo '		```'
 		done
 	done
