@@ -87,6 +87,12 @@
 		```
 		https://raw.githubusercontent.com/h4m6urg1r/wallpapers/main/miscellaneous//ManDogCosmicStar.jpg
 		```
+1. **sekiro**
+	- [WolfLookingAtACastle.jpg](https://raw.githubusercontent.com/h4m6urg1r/wallpapers/main/sekiro//WolfLookingAtACastle.jpg)
+![WolfLookingAtACastle.jpg](/sekiro/WolfLookingAtACastle.jpg)
+		```
+		https://raw.githubusercontent.com/h4m6urg1r/wallpapers/main/sekiro//WolfLookingAtACastle.jpg
+		```
 1. **your_name**
 	- [MitsuhaComet.jpg](https://raw.githubusercontent.com/h4m6urg1r/wallpapers/main/your_name//MitsuhaComet.jpg)
 ![MitsuhaComet.jpg](/your_name/MitsuhaComet.jpg)
