@@ -115,7 +115,9 @@ self: {
 					inherit (cfg.desktop) dir;
 					inherit (cfg.desktop) file;
 				};
-				hyprland = lib.mkIf (builtins.pathExists cfg.desktop.nixConf) (import cfg.desktop.nixConf);
+				hyprland = if (builtins.pathExists cfg.desktop.nixConf) then
+					(import cfg.desktop.nixConf)
+				else {};
 			};
 		};
 	};
