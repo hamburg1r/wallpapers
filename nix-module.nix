@@ -40,7 +40,7 @@ self: {
 						description = "Resulting image";
 					};
 				};
-				grub = {
+				bootloader = {
 					dir = lib.mkOption {
 						default = "your_name";
 						description = "Directory containing the wallpaper";
@@ -80,9 +80,9 @@ self: {
 					dir = cfg.sddm.dir;
 					file = cfg.sddm.file;
 				};
-				grub.output = self.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
-					dir = cfg.grub.dir;
-					file = cfg.grub.file;
+				bootloader.output = self.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
+					dir = cfg.bootloader.dir;
+					file = cfg.bootloader.file;
 				};
 				# hyprland = (if (builtins.pathExists cfg.desktop.nixConf) then
 				# 		import cfg.desktop.nixConf
